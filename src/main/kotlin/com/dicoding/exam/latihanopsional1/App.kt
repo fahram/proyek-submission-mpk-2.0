@@ -27,9 +27,8 @@ package com.dicoding.exam.latihanopsional1
  *  Modul terkait: Functional Programming dan Collections.
  */
 
-fun sumOfBigThree(vararg numbers: Int): Int {
-    return 0
-}
+fun sumOfBigThree(vararg numbers: Int): Int = numbers.sortedDescending().slice(0..2).sum()
+
 
 fun main() {
     println(sumOfBigThree(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) == 27)
