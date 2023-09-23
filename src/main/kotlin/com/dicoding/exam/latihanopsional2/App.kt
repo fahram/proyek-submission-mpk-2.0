@@ -28,7 +28,8 @@ package com.dicoding.exam.latihanopsional2
  */
 
 fun minAndMax(number: Int): Int {
-    return 0
+    val numbers = number.toString().map { it.toString().toInt() }.toIntArray().sortedArray()
+    return numbers[0] + numbers[numbers.size - 1]
 }
 
 fun main() {
