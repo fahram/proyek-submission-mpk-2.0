@@ -25,10 +25,7 @@ import kotlinx.coroutines.runBlocking
  *     - Mengembalikkan nilai kembalian hasil dari perhitungan denngan rumus valueA + valueB
  *
  */
-suspend fun sum(valueA: Int, valueB: Int): Int {
-    delay(3000L)
-    return valueA + valueB
-}
+suspend fun sum(valueA: Int, valueB: Int): Int = (valueA + valueB).also { delay(3000) }
 
 /**
  *  TODO 2
@@ -39,10 +36,7 @@ suspend fun sum(valueA: Int, valueB: Int): Int {
  *     - Mengembalikkan nilai kembalian hasil dari perhitungan denngan rumus valueA * valueB
  *
  */
-suspend fun multiple(valueA: Int, valueB: Int): Int {
-    delay(2000L)
-    return valueA * valueB
-}
+suspend fun multiple(valueA: Int, valueB: Int): Int = (valueA * valueB).also { delay(2000) }
 
 fun main() = runBlocking {
     println("Counting...")
