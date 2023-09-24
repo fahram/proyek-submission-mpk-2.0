@@ -30,7 +30,7 @@ package com.dicoding.exam.latihan3
  *
  */
 fun <T> checkType(args: T): String {
-    return    "Yes! it's " + when (args) {
+    return "Yes! it's " + when (args) {
         is Int -> "Integer"
         is String -> "String"
         is Boolean -> "Boolean"
